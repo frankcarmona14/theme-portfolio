@@ -1,0 +1,638 @@
+@font-face{
+	font-family: "Roboto";
+	src: url('../fuentes/Roboto-Regular.ttf');
+}
+
+@font-face{
+	font-family: "Titulos";
+	src: url('../fuentes/FrancoisOne-Regular.ttf');
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto';
+}
+
+h1,h2,h3{
+	font-family: 'Titulos';
+	letter-spacing: 2px;
+}
+
+
+.logo img{
+	width: 40px;
+	height: 40px;
+}
+
+.logo-tarjeta img{
+	width: 80px;
+	height: 80px;
+}
+
+.logo-tarjeta{
+	margin: 40px 40%;
+}
+
+.navegacion{
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+	box-shadow: 0 10px 20px rgba(0,0,0, .5);
+}
+
+.navegacion ul{
+	float: right;
+	width: 100%;
+	height: 60px;
+	background-color: #151414;
+	display: flex;
+	text-indent: none;	
+	align-items: center;
+	justify-content: center;
+}
+
+.navegacion ul li{
+	list-style: none;
+	transition: 0.5s;
+}
+
+.navegacion ul li a{
+	text-decoration: none;
+	display: block;
+	position: relative;
+	font-weight: bold;
+	padding: 20px;
+	font-size: 14px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.navegacion ul li a:hover{
+	color: #E14658;
+}
+
+.header-caja{
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 400px;
+	width: 90%;
+	background: #000;
+	box-shadow: 0 8px 30px rgba(0,0,0, .5);
+	display: flex;
+}
+
+.caja-imagen{
+	width: 50%;
+	height: 100%;
+	color: #C0B3A0;
+	background-color: #3F3250;
+	box-sizing: border-box;
+	border-right: 100px solid #3F3250;
+	border-top: 400px solid transparent;
+	background: url(../img/fotoFrank.jpg) -140px -550px no-repeat;
+}
+
+.contenido-header{
+	width: 50%;
+	height: 100%;
+	background-color: #3F3250;
+	color: #C0B3A0;
+	box-sizing: border-box;
+}
+
+.contenido-header ul li{
+	position: relative;
+	margin-right: 13px;
+	top: 40px;
+	padding-right: 20px; 
+	list-style: none;
+	transition: 1s;
+	display: inline-block;
+	background-color: #3F3250;
+	text-align: center;
+	padding: 5px 5px 0 2px;
+	width: 40px;
+	height: 40px;
+	border-radius: 100px;
+}
+
+.contenido-header ul li:hover{
+	background-color: #C0B3A0;
+}
+
+.contenido-header ul a{
+	color: #C0B3A0;
+}
+
+.contenido-header ul li:hover a{
+	color: #3F3250;
+}
+
+.contenido-header h1{
+	font-size: 70px;
+}
+
+.contenido-header hgroup{	
+	margin: 20px 0 0 20px;
+}
+
+.contenido-header h2{	
+	font-size: 28px; 
+}
+
+.boton{
+	display: block;
+	text-decoration: none;
+	color: #22252C;
+	background-color: #C0B3A0;
+	width: 120px;
+	text-align: center;
+	margin: 5px 50px 0 0;
+	float: right;
+	padding-top: 10px;
+	border-radius: 4px;
+	height: 30px;
+}
+
+#header{
+	background: url(../img/fondo.jpg) 0 0 fixed no-repeat;
+	background-size: cover;
+	height: 680px;
+}
+
+#informacion{
+	padding: 100px;
+	margin: 0 auto;
+	width: 80%;
+	height: 900px;
+}
+
+#informacion .conoceme{
+	line-height: 28px;
+	width: 54%;
+	padding: 0 20px 20px;
+	float: left;
+	text-align: justify;
+	box-shadow: -10px 10px 19px -12px rgba(120,120,120,1);
+}
+
+#informacion h2{
+	padding-top: 40px; 
+	font-size: 30px;
+	margin: 0 0 30px;
+	color: #777;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#informacion aside{
+	padding: 10px;
+	background-color: #22252C;
+	float: right;
+	width: 40%;
+	height: 380px;
+	color: #FFF;
+}
+
+#informacion aside h3{
+	text-align: center;
+	padding: 20px 0;
+}
+
+#informacion aside i{
+	margin-right: 30px;
+	color: #E14658;
+}
+
+#informacion aside ul li{
+	list-style: none;
+	padding: 20px;
+}
+
+#sconocimientos{	
+	background: url(../img/fondo-skills.jpeg) 0 0 fixed no-repeat;
+	background-size: cover;
+	height: 600px;
+	padding: 80px 0 120px;
+}
+
+#conocimientos{
+	height: 650px;
+	width: 80%;
+	margin: 0 auto;
+	background-color:  #22252C;
+	color: #FFF;
+	opacity: .9;
+	box-shadow: 0px 0px 80px rgba(0,0,0, .8);
+}
+
+#conocimientos h2{
+	padding-top: 40px; 
+	font-size: 30px;
+	margin: 0 0 30px;
+	color: #FFF;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#informacion .video{
+	top: 5%;
+	justify-content: justify;
+	line-height: 1.6;
+	width: 68%;
+	align-items: center;
+	position: relative;
+	margin: 20px auto;
+}
+
+#conocimientos li{
+	position: relative;
+	padding: 42px 0 0 22px;
+	list-style: none;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+#conocimientos li:before{
+	content: "";
+	position: absolute;
+	top: calc(100% + 10px);
+	left: 50px;
+	width: 90%;
+	height: 15px;
+	background-color: #E14658;
+	opacity: .5;
+	border-radius: 100px;
+}
+
+.porcentaje{
+	float: right;
+	margin-right: 100px;
+	animation: fadeIn 1.5s;
+}
+
+#conocimientos li:after{
+	content: "";
+	position: absolute;
+	top: calc(100% + 10px);
+	left: 50px;
+	width: 0;
+	height: 15px;
+	background-color: #E14658;
+	opacity: 1;
+	border-radius: 100px;
+	animation-duration: 1.6s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+}
+
+#conocimientos li:first-of-type:after{
+	animation-name: javascript;
+}
+
+#conocimientos li:nth-of-type(2):after{
+	animation-name: php;
+	animation-delay: .3s;
+}
+
+#conocimientos li:nth-of-type(3):after{
+	animation-name: html;
+	animation-delay: .6s;
+}
+
+#conocimientos li:nth-of-type(4):after{
+	animation-name: css;
+	animation-delay: .9s;
+}
+
+#conocimientos li:nth-of-type(5):after{
+	animation-name: jquery;
+	animation-delay: 1.2s;
+}
+
+#conocimientos li:nth-of-type(6):after{
+	animation-name: css;
+	animation-delay: 1.4s;
+}
+
+#conocimientos li:nth-of-type(7):after{
+	animation-name: java;
+	animation-delay: 1.6s;
+}
+
+#conocimientos li:last-of-type:after{
+	animation-name: mysql;
+	animation-delay: 1.8s;
+}
+
+#portfolio{
+	padding: 80px 0 140px;
+	height: 700px;
+	background-color: #3F3250;
+}
+
+#proyecto{
+	width: 70%;
+	height: 550px;
+	margin: 0 auto;
+	background-color: #3F3250;
+	padding: 100px;	
+	color: #fff;
+	text-align: center;
+	box-shadow: 0px 0px 80px rgba(0,0,0);
+}
+
+.proyecto1 .txt{
+	width: 100%;
+	height: 266px;
+	opacity: 0;
+	transition: opacity .4s;
+	background-color: rgba(0,0,0,.9);
+}
+
+.proyecto2 .txt,
+.proyecto3 .txt{
+	width: 100%;
+	height: 300px;
+	opacity: 0;
+	transition: opacity .4s;
+	background-color: rgba(0,0,0,.9);
+}
+
+#proyecto div h2{
+	position: relative;
+	top: 50%;
+}
+
+#proyecto .proyecto1{
+	width: 100%;
+	height: 266px;
+	position: relative;
+	overflow: hidden;
+	vertical-align: center;
+	background: url(../img/proyecto1.jpg) no-repeat;	
+	background-size: cover;
+}
+
+#proyecto .proy-segundo .proyecto2{
+	float: left;	
+	position: relative;
+	overflow: hidden;
+	width: 50%;
+	height: 300px;
+	background: url(../img/proyecto2.jpeg) no-repeat;
+	background-size: cover;
+}
+
+#portfolio h2{
+	padding-top: 40px; 
+	font-size: 30px;
+	margin: 0 0 30px;
+	color: #FFF;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#proyecto .proy-segundo .proyecto3{
+	float: left;
+	position: relative;
+	overflow: hidden;
+	width: 50%;
+	height: 300px;
+	background: url(../img/proyecto3.gif) -10px no-repeat;
+	background-size: cover;
+}
+
+#proyecto .proyecto1:hover .txt,
+#proyecto .proyecto2:hover .txt,
+#proyecto .proyecto3:hover .txt{
+	opacity: 1;
+	cursor: pointer;
+}
+
+#proyecto .proyecto1:after,
+#proyecto .proyecto1:before{
+	content: "";
+	position: absolute;
+	width: calc(100% - 30px);
+	height: 4px;
+	background: #C0B3A0;
+	transition: all .3s;
+}
+
+#proyecto .proyecto1:before,
+#proyecto .proyecto2:before,
+#proyecto .proyecto3:before{
+	left: -100%;
+	top: 10px;
+}
+
+#proyecto .proyecto1:after,
+#proyecto .proyecto2:after,
+#proyecto .proyecto3:after{
+	left: 100%;
+	bottom: 10px;
+}
+
+#proyecto .proyecto1:hover:before,
+#proyecto .proyecto2:hover:before,
+#proyecto .proyecto3:hover:before,
+#proyecto .proyecto1:hover:after,
+#proyecto .proyecto2:hover:after,
+#proyecto .proyecto3:hover:after{
+	left: 15px;
+}
+
+#proyecto .proyecto2:after,
+#proyecto .proyecto2:before{
+	content: "";
+	position: absolute;
+	width: calc(100% - 30px);
+	height: 4px;
+	background: #C0B3A0;
+	transition: all .3s;
+}
+
+#proyecto .proyecto3:after,
+#proyecto .proyecto3:before{
+	content: "";
+	position: absolute;
+	width: calc(100% - 30px);
+	height: 4px;
+	background: #C0B3A0;
+	transition: all .3s;
+}
+
+
+.ocultar-contenido{
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.obligatorio{
+	color: #E14658;
+	font-size: 28px;
+}
+
+#contactame{
+	background: url(../img/fondo-contactame.jpeg) 0 0 fixed no-repeat;
+	background-size: cover;
+	padding: 100px;
+	height: 600px;
+}
+
+#formulario{
+	height: 640px;
+	z-index: 1;
+	width: 90%;
+	background: #fff;
+	margin: 0 auto;
+	box-shadow: 0px 0px 80px rgba(0,0,0, .8);
+}
+
+#formulario h2{
+	padding-top: 40px; 
+	font-size: 30px;
+	margin: 0 0 30px;
+	color: #777;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.input-field{
+	position: relative;
+	width: 90%;
+	margin: 60px 5% 0;
+}
+
+.input-field input, .input-field textarea{
+	width: 100%;
+	padding: 5px;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
+	border-bottom: 2px solid #777;
+	font-size: 16px;
+	color: #777;
+	font-weight: 700;
+	resize: none;
+}
+
+.input-field label{
+	top: -10px;
+	position: absolute;
+	left: 0;
+	padding: 5px 0;
+	pointer-events: none;
+	font-size: 16px;
+	color: #777;
+	font-weight: 700;
+	transition: 0.5s;
+}
+
+.input-field input:focus + label,
+.input-field textarea:focus + label,
+.input-field input:valid + label,
+.input-field textarea:valid + label{
+	top: -50px;
+	font-size: 14px;
+	padding: 4px 5px;
+	background-color: #3F3250;
+	color: #C0B3A0;
+	border-radius: 3px;
+}
+
+.btn-enviar{
+	margin: 2% 5%;
+	background-color: #3F3250;
+	color: #C0B3A0;
+	padding: 15px 30px;
+	border: none;
+	outline: none;
+	border-radius: 30px;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 16px;
+	transition: 0.5s;
+	float: right;
+	cursor: pointer;
+}
+
+.pie-pagina{
+	text-align: center;
+	height: 30px;
+	background-color: #22252C;
+	color: #C0B3A0;
+	padding: 20px;
+}
+
+.pie-pagina a{
+	margin-right: 120px;
+}
+
+.paleta{
+	color: #E14658;
+	color: #22252C;
+	color: #3F3250;
+	color: #C0B3A0;
+}
+
+
+/* ANIMACIONES */
+
+@keyframes javascript{
+	to{
+		width: 68%;
+	}
+}
+
+@keyframes php{
+	to{
+		width: 50%;
+	}
+}
+
+@keyframes html{
+	to{
+		width: 80%;
+	}
+}
+
+@keyframes css{
+	to{
+		width: 75%;
+	}
+}
+
+@keyframes jquery{
+	to{
+		width: 65%;
+	}
+}
+
+@keyframes java{
+	to{
+		width: 62%;
+	}
+}
+
+@keyframes mysql{
+	to{
+		width: 80%;
+	}
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

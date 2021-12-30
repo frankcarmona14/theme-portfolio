@@ -1,0 +1,404 @@
+﻿1
+00:00:00,080 --> 00:00:05,440
+En este vídeo te voy a explicar qué es Angular,
+cuál es su filosofía y cómo crear tu primer proyecto.
+
+2
+00:00:05,620 --> 00:00:09,920
+Angular es el entorno de desarrollo front-end
+más popular del mundo y miles de personas
+
+3
+00:00:09,920 --> 00:00:13,269
+lo utilizan cada día para desarrollar grandes
+aplicaciones.
+
+4
+00:00:13,269 --> 00:00:17,930
+Mi nombre es Diego Castaño, soy ingeniero
+web, y hoy vas a aprender cuáles son los
+
+5
+00:00:17,930 --> 00:00:20,960
+fundamentos de Angular en tan sólo 5 minutos.
+
+6
+00:00:20,960 --> 00:00:21,840
+¡Vamos a verlo!
+
+7
+00:00:28,600 --> 00:00:30,920
+Antes de nada, quiero dejar clara una cosa.
+
+8
+00:00:30,929 --> 00:00:36,000
+Hay muchas versiones de Angular, pero vamos
+a hacer una separación muy importante.
+
+9
+00:00:36,000 --> 00:00:41,320
+Por un lado están las versiones anteriores
+a Angular 2, lo que se conoce como AngularJS.
+
+10
+00:00:41,320 --> 00:00:43,750
+En este vídeo no voy a hablar de esta librería.
+
+11
+00:00:43,750 --> 00:00:48,010
+De lo que sí voy a hablar en este vídeo
+es de Angular 2 y las versiones posteriores.
+
+12
+00:00:48,010 --> 00:00:50,640
+Lo que se conoce como Angular a secas.
+
+13
+00:00:50,640 --> 00:00:53,730
+Tanto Angular 2, como Angular 3 (que no existe), como Angular 4 .
+
+14
+00:00:53,730 --> 00:00:58,879
+La gran diferencia es que Angular a secas
+es un gran entorno de trabajo muy completo.
+
+15
+00:00:58,890 --> 00:01:03,390
+Está orientado a hacer grandes aplicaciones
+de forma modular y más moderna.
+
+16
+00:01:03,390 --> 00:01:07,830
+Pero antes de enrollarme y explicar más cosas
+vais a crear vuestro primer proyecto.
+
+17
+00:01:07,830 --> 00:01:12,670
+Para ello necesitas tener instalado Node y
+su gestor de dependencias NPM.
+
+18
+00:01:12,670 --> 00:01:16,340
+Si no los tienes instalados en la descripción
+del vídeo puedes ver cómo hacerlo.
+
+19
+00:01:16,340 --> 00:01:18,440
+Ahora tienes que instalar angular-cli.
+
+20
+00:01:18,440 --> 00:01:22,000
+Esto te va a automatizar muchas de las tareas
+de desarrollo.
+
+21
+00:01:22,000 --> 00:01:24,640
+Para instalar angular-cli tenemos que ejecutar:
+
+22
+00:01:24,640 --> 00:01:31,860
+npm install -g @angular/cli
+
+23
+00:01:33,060 --> 00:01:38,180
+Y una vez lo tengamos instalado ya podemos
+crear nuestro primer proyecto ejecutando:
+
+24
+00:01:38,180 --> 00:01:43,770
+ng new y el nombre de tu aplicación.
+
+25
+00:01:43,770 --> 00:01:47,640
+Este comando creará una carpeta con el nombre
+de tu aplicación y meterá dentro todo el
+
+26
+00:01:47,640 --> 00:01:49,120
+código necesario.
+
+27
+00:01:49,120 --> 00:01:54,390
+Si ahora te metes en ese directorio con el
+comando cd nombre del directorio, podrás
+
+28
+00:01:54,390 --> 00:01:59,920
+ejecutar ng serve para lanzar un servidor
+con la aplicación web que acabas de crear.
+
+29
+00:01:59,920 --> 00:02:03,971
+Y ahora que ya has creado tu primera aplicación
+te voy a explicar cómo funciona, cuál es
+
+30
+00:02:03,971 --> 00:02:05,700
+la arquitectura que hay detrás de Angular.
+
+31
+00:02:05,700 --> 00:02:10,550
+La manera más estándar de programar Angular
+es mediante el lenguaje TypeScript, que luego
+
+32
+00:02:10,550 --> 00:02:12,020
+es compilado a JavaScript.
+
+33
+00:02:12,020 --> 00:02:16,261
+Cada fichero TypeScript que compone nuestra
+aplicación va a contener una clase o una
+
+34
+00:02:16,261 --> 00:02:17,261
+interfaz
+
+35
+00:02:17,261 --> 00:02:21,609
+y, en ocasiones, decoradores que nos van a
+permitir, de forma mágica, transformar estas
+
+36
+00:02:21,610 --> 00:02:23,510
+clases en tipos especiales.
+
+37
+00:02:23,510 --> 00:02:26,649
+En Angular existen cuatro tipos principales
+de clases:
+
+38
+00:02:26,650 --> 00:02:30,250
+Los componentes, las directivas, los módulos
+y los servicios.
+
+39
+00:02:30,250 --> 00:02:35,230
+Un componente es un clase que controla cómo
+se comporta un cachito de lo que aparece en
+
+40
+00:02:35,230 --> 00:02:36,230
+pantalla.
+
+41
+00:02:36,230 --> 00:02:38,700
+A ese cachito lo vamos a llamar "vista".
+
+42
+00:02:38,700 --> 00:02:42,730
+Para convertir nuestra clase en componente
+utilizamos el decorador @Component()
+
+43
+00:02:42,730 --> 00:02:47,799
+Dentro de este decorador vamos a especificar
+cómo se va a mostrar este componente utilizando
+
+44
+00:02:47,800 --> 00:02:50,900
+un template, es decir, una plantilla HTML.
+
+45
+00:02:50,900 --> 00:02:56,400
+Y para definir su comportamiento vamos a utilizar
+los atributos de la clase y sus métodos.
+
+46
+00:02:56,400 --> 00:02:59,930
+Un componente Angular puede a su vez contener
+más componentes.
+
+47
+00:02:59,930 --> 00:03:05,090
+Por ejemplo: si tenemos un componente que
+es una ventana de chat, cada uno de los mensajes
+
+48
+00:03:05,090 --> 00:03:07,200
+podría ser un sub-componente.
+
+49
+00:03:07,200 --> 00:03:10,929
+Para que un componente se pueda comunicar
+con los componentes que tiene dentro existen
+
+50
+00:03:10,930 --> 00:03:12,670
+dos mecanismos:
+
+51
+00:03:12,670 --> 00:03:16,619
+Para enviarles datos vamos a utilizar propiedades.
+
+52
+00:03:16,620 --> 00:03:19,730
+Y para recibir datos vamos a utilizar eventos.
+
+53
+00:03:19,730 --> 00:03:23,269
+Para implementar esta comunicación vamos
+a hacer uso de lo que se llaman Bindings o
+
+54
+00:03:23,270 --> 00:03:24,640
+uniones.
+
+55
+00:03:24,640 --> 00:03:26,510
+Existen tres tipos de binding:
+
+56
+00:03:26,510 --> 00:03:31,510
+El binding de propiedad, con el que asignamos
+un valor a uno de los inputs del componente.
+
+57
+00:03:31,510 --> 00:03:34,489
+Cada vez que cambie este valor el componente
+lo va a recibir.
+
+58
+00:03:34,489 --> 00:03:39,770
+Binding de evento, cada vez que el componente
+hijo emita un evento, el componente padre
+
+59
+00:03:39,770 --> 00:03:41,250
+va a ser notificado.
+
+60
+00:03:41,250 --> 00:03:45,400
+Y por último el binding doble, que es una
+combinación de los dos anteriores.
+
+61
+00:03:45,400 --> 00:03:49,390
+Cada vez que cambie el valor se notifica al
+hijo, y cada vez que cambie el hijo se notifica
+
+62
+00:03:49,390 --> 00:03:52,129
+al padre.
+
+63
+00:03:52,129 --> 00:03:57,679
+Una directiva es una clase especial que define
+palabras clave que podremos usar dentro de
+
+64
+00:03:57,680 --> 00:03:58,680
+nuestro templates.
+
+65
+00:03:58,680 --> 00:04:03,629
+Una directiva puede ser estructural, si modifica
+el diseño, como por ejemplo el *ngFor.
+
+66
+00:04:03,629 --> 00:04:08,629
+O también puede ser una directiva de atributo,
+que modifica la apariencia o el comportamiento
+
+67
+00:04:08,629 --> 00:04:14,379
+de un componente, como por ejemplo el binding
+doble que hemos visto antes.
+
+68
+00:04:14,379 --> 00:04:16,370
+El módulo es la clase principal.
+
+69
+00:04:16,370 --> 00:04:19,930
+Todas las aplicaciones tendrán al menos un
+módulo principal.
+
+70
+00:04:19,930 --> 00:04:24,719
+Si son aplicaciones muy grandes podrán tener
+varios módulos uno para cada funcionalidad.
+
+71
+00:04:24,720 --> 00:04:28,520
+En un módulo se especifica qué dependencias
+tiene la aplicación, que componentes va a
+
+72
+00:04:28,520 --> 00:04:32,580
+contener y cuál de ellos es el principal.
+
+73
+00:04:32,580 --> 00:04:38,800
+Los servicios son clases que pueden ser usadas
+por los componentes para pedir datos u operaciones.
+
+74
+00:04:38,800 --> 00:04:43,839
+Deberás utilizar servicios para aislar toda la
+lógica de negocio de tu aplicación.
+
+75
+00:04:43,839 --> 00:04:46,809
+Típicamente se usan servicios para hacer
+peticiones a APIs.
+
+76
+00:04:46,809 --> 00:04:51,479
+Pero espera, eso no es todo: Angular tiene
+un mecanismo muy cómodo para que podamos
+
+77
+00:04:51,479 --> 00:04:56,469
+usar un mismo servicio dentro de múltiples
+componentes.
+
+78
+00:04:56,469 --> 00:05:00,870
+La inyección de dependencias es un patrón
+de diseño en el cual se pasan los objetos
+
+79
+00:05:00,870 --> 00:05:06,349
+por parámetro a una clase en lugar de ser
+la propia clase la que instancie esos objetos.
+
+80
+00:05:06,349 --> 00:05:10,750
+De esta manera la clase a la que le inyectamos
+los objetos es mucho más fácil de testear,
+
+81
+00:05:10,750 --> 00:05:12,940
+ya que no tiene dependencias directas.
+
+82
+00:05:12,940 --> 00:05:16,900
+En Angular tan sólo tienes que especificar
+en el módulo principal de tu aplicación
+
+83
+00:05:16,900 --> 00:05:22,109
+qué clases quieres hacer inyectables, de
+este modo, cada vez que las quieras usar en
+
+84
+00:05:22,110 --> 00:05:25,270
+un constructor, Angular, automáticamente,
+las instanciará por ti.
+
+85
+00:05:25,270 --> 00:05:26,539
+Y hasta aquí la introducción.
+
+86
+00:05:26,539 --> 00:05:31,259
+Si quieres saber más sobre Angular te recomiendo
+que visites su página oficial, angular.io.
+
+87
+00:05:31,259 --> 00:05:35,009
+Si te ha gustado este vídeo acuérdate de
+darle a "Me gusta" y suscribirte al canal.
+
